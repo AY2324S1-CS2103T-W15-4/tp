@@ -34,7 +34,6 @@ Refer to the guide [_Setting up and getting started_](SettingUp.md).
 
 **Value proposition**: easily search and connect with like-minded students amongst the large cohort of Computer Science students in NUS, based on different categories.
 
-
 ### User stories
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
@@ -56,7 +55,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 **Use case: Add additional details to your own profile**
 
 **MSS**
-
 1.  User navigates to their profile
 2.  CodeSphere shows all existing details
 3.  User adds additional details for some categories in their profile page
@@ -67,16 +65,12 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     Use case ends.
 
 **Extensions**
-
 * 2a. All categories have already been filled up.
-    
     * 2a1. CodeSphere prompts user to edit existing information.
     * 2a2. User edits existing details. </br> 
       Use case resumes at step 4.
-  
 
 * 3a. CodeSphere detects incorrect input format for details.
-
     * 3a1. CodeSphere prompts user to enter details in the correct format.
     * 3a2. User enters details again.
 
@@ -87,7 +81,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 **Preconditions**: User has an existing profile
 
 **MSS**
-
 1. User navigates to their profile.
 2. CodeSphere shows the profile page.
 3. User chooses to delete their entire profile.
@@ -98,9 +91,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    Use case ends.
 
 **Extensions**
-
 * 4a. User decides not to delete their profile.
-
     * 4a1.  User indicates that they do not wish to proceed with the deletion during confirmation.
       Use case resumes at step 2.
 
