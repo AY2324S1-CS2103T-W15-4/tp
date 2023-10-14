@@ -67,16 +67,16 @@ Command failure: Users enter the command with incorrect formatting, resulting in
 Edits an existing student that the user is currently overseeing.
 
 Format: `edit INDEX [n/NAME] [c/COURSE] [e/EMAIL] [r/REMARK]...`
-* Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed students list.
+* Edits the student at the specified `INDEX`. The index refers to the index number shown in the displayed students list.
 * The index **must be a positive integer** 1, 2, 3, …​
 * At least one of the optional fields must be provided.
 * Existing values will be updated to the input values.
-* When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
-* You can remove all the person’s tags by typing t/ without specifying any tags after.
+* When editing tags, the existing tags of the student will be removed i.e adding of tags is not cumulative.
+* You can remove all the student’s tags by typing t/ without specifying any tags after.
 
 Examples:
-* `edit 1 c/CS1101S e/susantan@u.nus.edu` Edits the course and email address of the 1st person to be CS1101S and susantan@u.nus.edu respectively.
-* `edit 2 n/Alex Yeoh t/` Edits the name of the 2nd person to be Alex Yeoh and clears all existing tags.
+* `edit 1 c/CS1101S e/susantan@u.nus.edu` Edits the course and email address of the 1st student to be CS1101S and susantan@u.nus.edu respectively.
+* `edit 2 n/Alex Yeoh t/` Edits the name of the 2nd student to be Alex Yeoh and clears all existing tags.
 
 Command succeeds: Success message shown to user, relevant fields of the specified student successfully updated and stored in database, change in GUI.
 

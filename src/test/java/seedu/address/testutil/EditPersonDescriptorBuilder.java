@@ -4,12 +4,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;
-import seedu.address.model.person.Address;
-import seedu.address.model.person.Email;
-import seedu.address.model.person.Name;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.Phone;
+import seedu.address.logic.commands.EditCommand;
+import seedu.address.logic.commands.EditCommand.EditStudentDescriptor;
+import seedu.address.model.person.*;
+import seedu.address.model.person.Course;
 import seedu.address.model.tag.Tag;
 
 /**
@@ -17,26 +15,25 @@ import seedu.address.model.tag.Tag;
  */
 public class EditPersonDescriptorBuilder {
 
-    private EditPersonDescriptor descriptor;
+    private EditStudentDescriptor descriptor;
 
     public EditPersonDescriptorBuilder() {
-        descriptor = new EditPersonDescriptor();
+        descriptor = new EditCommand.EditStudentDescriptor();
     }
 
-    public EditPersonDescriptorBuilder(EditPersonDescriptor descriptor) {
-        this.descriptor = new EditPersonDescriptor(descriptor);
+    public EditPersonDescriptorBuilder(EditCommand.EditStudentDescriptor descriptor) {
+        this.descriptor = new EditStudentDescriptor(descriptor);
     }
 
     /**
      * Returns an {@code EditPersonDescriptor} with fields containing {@code person}'s details
      */
-    public EditPersonDescriptorBuilder(Person person) {
-        descriptor = new EditPersonDescriptor();
-        descriptor.setName(person.getName());
-        descriptor.setPhone(person.getPhone());
-        descriptor.setEmail(person.getEmail());
-        descriptor.setAddress(person.getAddress());
-        descriptor.setTags(person.getTags());
+    public EditPersonDescriptorBuilder(Student student) {
+        descriptor = new EditStudentDescriptor();
+        descriptor.setName(student.getName());
+        descriptor.setCourse(student.getCourse());
+        descriptor.setEmail(student.getEmail());
+        descriptor.setTags(student.getTags());
     }
 
     /**
@@ -51,7 +48,7 @@ public class EditPersonDescriptorBuilder {
      * Sets the {@code Phone} of the {@code EditPersonDescriptor} that we are building.
      */
     public EditPersonDescriptorBuilder withPhone(String phone) {
-        descriptor.setPhone(new Phone(phone));
+        descriptor.setCourse(new Course(phone));
         return this;
     }
 
@@ -60,14 +57,6 @@ public class EditPersonDescriptorBuilder {
      */
     public EditPersonDescriptorBuilder withEmail(String email) {
         descriptor.setEmail(new Email(email));
-        return this;
-    }
-
-    /**
-     * Sets the {@code Address} of the {@code EditPersonDescriptor} that we are building.
-     */
-    public EditPersonDescriptorBuilder withAddress(String address) {
-        descriptor.setAddress(new Address(address));
         return this;
     }
 
@@ -81,7 +70,7 @@ public class EditPersonDescriptorBuilder {
         return this;
     }
 
-    public EditPersonDescriptor build() {
+    public EditCommand.EditStudentDescriptor build() {
         return descriptor;
     }
 }
