@@ -16,11 +16,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 import seedu.address.commons.exceptions.DataLoadingException;
-import seedu.address.model.StudentList;
 import seedu.address.model.ReadOnlyStudentList;
+import seedu.address.model.StudentList;
 
 public class JsonStudentListStorageTest {
-    private static final Path TEST_DATA_FOLDER = Paths.get("src", "test", "data", "JsonAddressBookStorageTest");
+    private static final Path TEST_DATA_FOLDER = Paths.get("src", "test",
+            "data", "JsonAddressBookStorageTest");
 
     @TempDir
     public Path testFolder;
@@ -57,7 +58,8 @@ public class JsonStudentListStorageTest {
 
     @Test
     public void readAddressBook_invalidAndValidPersonAddressBook_throwDataLoadingException() {
-        assertThrows(DataLoadingException.class, () -> readAddressBook("invalidAndValidPersonAddressBook.json"));
+        assertThrows(DataLoadingException.class, () -> readAddressBook(
+                "invalidAndValidPersonAddressBook.json"));
     }
 
     @Test

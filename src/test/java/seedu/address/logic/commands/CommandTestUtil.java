@@ -2,9 +2,9 @@ package seedu.address.logic.commands;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_COURSE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_COURSE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
 import static seedu.address.testutil.Assert.assertThrows;
 
@@ -14,8 +14,8 @@ import java.util.List;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.StudentList;
 import seedu.address.model.Model;
+import seedu.address.model.StudentList;
 import seedu.address.model.person.NameContainsKeywordsPredicate;
 import seedu.address.model.person.Student;
 import seedu.address.testutil.EditPersonDescriptorBuilder;
@@ -44,7 +44,8 @@ public class CommandTestUtil {
     public static final String TAG_DESC_GOOD = " " + PREFIX_TAG + VALID_TAG_GOOD;
 
     public static final String INVALID_NAME_DESC = " " + PREFIX_NAME + "James&"; // '&' not allowed in names
-    public static final String INVALID_COURSE_DESC = " " + PREFIX_COURSE + "911a"; // courses should start with alphabetical prefix
+    // courses should start with alphabetical prefix
+    public static final String INVALID_COURSE_DESC = " " + PREFIX_COURSE + "911a";
     public static final String INVALID_EMAIL_DESC = " " + PREFIX_EMAIL + "bob!yahoo"; // missing '@' symbol
     public static final String INVALID_TAG_DESC = " " + PREFIX_TAG + "GOOD*"; // '*' not allowed in tags
 
