@@ -6,7 +6,9 @@ import java.util.stream.Collectors;
 
 import seedu.address.model.StudentList;
 import seedu.address.model.ReadOnlyStudentList;
-import seedu.address.model.person.*;
+import seedu.address.model.person.Course;
+import seedu.address.model.person.Email;
+import seedu.address.model.person.Name;
 import seedu.address.model.person.Student;
 import seedu.address.model.tag.Tag;
 
