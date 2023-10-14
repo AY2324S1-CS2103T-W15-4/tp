@@ -78,7 +78,8 @@ public class StudentList implements ReadOnlyStudentList {
     /**
      * Replaces the given student {@code target} in the list with {@code editedStudent}.
      * {@code target} must exist in the student list.
-     * The person identity of {@code editedStudent} must not be the same as another existing student in the student list.
+     * The person identity of {@code editedStudent} must not be the same as
+     * another existing student in the student list.
      */
     public void setStudent(Student target, Student editedStudent) {
         requireNonNull(editedStudent);

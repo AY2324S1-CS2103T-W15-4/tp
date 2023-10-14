@@ -11,7 +11,8 @@ public class Course {
 
 
     public static final String MESSAGE_CONSTRAINTS =
-            "Course code should contain a two- or three-letter prefix, four digits course code and an optional one-letter suffix";
+            "Course code should contain a two- or three-letter prefix, " +
+                    "four digits course code and an optional one-letter suffix";
     public static final String VALIDATION_REGEX = "\\w{6,8}";
     public final String value;
 
