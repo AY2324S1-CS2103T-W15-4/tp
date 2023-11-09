@@ -100,13 +100,6 @@
     -fx-background-radius: 10;
 }
 
-/*
-.list-cell:filled {
-    -fx-border-color: #8EACCD;
-    -fx-border-radius: 10;
-}
-*/
-
 .list-cell:filled:even {
     -fx-background-color: #3c3e3f;
 }

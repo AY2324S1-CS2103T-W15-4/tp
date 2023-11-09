@@ -19,6 +19,7 @@ class StageManagerTest {
     @BeforeEach
     void setUp() {
         stageManager = StageManager.getInstance();
+        stageManager.setHomeStage();
     }
 
     @Test

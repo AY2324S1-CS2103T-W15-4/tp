@@ -6,6 +6,8 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import seedu.address.model.person.Student;
 
 /**
@@ -34,13 +36,13 @@ public class StudentCard extends UiPart<Region> {
     @FXML
     private Label email;
     @FXML
-    private Label remark;
+    private Text remark;
     @FXML
-    private Label pendingQuestion;
+    private Text pendingQuestion;
     @FXML
     private FlowPane tag;
     @FXML
-    private Pane remarkPane;
+    private TextFlow remarkPane;
     @FXML
     private Pane pqPane;
 

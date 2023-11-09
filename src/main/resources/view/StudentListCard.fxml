@@ -8,10 +8,12 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
 <HBox id="cardPane" fx:id="cardPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
   <GridPane HBox.hgrow="ALWAYS">
@@ -57,18 +59,22 @@
                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
             </padding>
          </HBox>
-         <HBox>
+         <HBox fx:id="remarkHBox">
             <children>
-               <Pane fx:id="remarkPane">
+               <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/icons/notes.png" />
+                  </image>
+               </ImageView>
+               <TextFlow fx:id="remarkPane" translateX="6.0">
                   <children>
-                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../images/icons/notes.png" />
-                        </image>
-                     </ImageView>
-                  <Label fx:id="remark" layoutX="18.0" styleClass="cell_small_label" text="\$remark" translateX="3.0" />
+                     <Text fx:id="remark" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="\$remark">
+                        <font>
+                            <Font name="Segoe UI" size="13.0" />
+                        </font>
+                     </Text>
                   </children>
-               </Pane>
+               </TextFlow>
             </children>
             <padding>
                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -76,16 +82,20 @@
          </HBox>
          <HBox>
             <children>
-               <Pane fx:id="pqPane">
+               <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/icons/question.png" />
+                  </image>
+               </ImageView>
+               <TextFlow fx:id="pqPane" translateX="6.0">
                   <children>
-                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../images/icons/question.png" />
-                        </image>
-                     </ImageView>
-                  <Label fx:id="pendingQuestion" layoutX="18.0" styleClass="cell_small_label" text="\$pendingQuestion" translateX="3.0" />
+                      <Text fx:id="pendingQuestion" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="\$pq">
+                          <font>
+                              <Font name="Segoe UI" size="13.0" />
+                          </font>
+                      </Text>
                   </children>
-               </Pane>
+               </TextFlow>
             </children>
             <padding>
                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
